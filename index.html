@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="slideAngular" ng-controller="MainController as mainCtrl">
+    <div class="mnSlider">
+        <div class="mnSlider-wrap">
+            <div class="mnSlider-slide" 
+            ng-repeat="elem in mainCtrl.mnSlide.lista"
+            ng-class="{'before':elem._mnSlide.before,'actual':elem._mnSlide.actual,'after':elem._mnSlide.after}"
+            >
+                <div class="text-center">
+                    <img ng-src="{{elem.img}}" alt="">
+                    <p>{{elem.nome}}</p>
+                    <!--<span ng-if="elem.flexBoxSlide.before">before</span>
+                <span ng-if="elem.flexBoxSlide.after">after</span>
+                <span ng-if="elem.flexBoxSlide.actual">actual</span>-->
+                    <h4>{{elem.idade}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class='controls'>
+        <button class='toggle' ng-click="mainCtrl.prev()">Prev</button>
+        <button class='toggle' ng-click="mainCtrl.next()">Next</button>
+    </div>-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <!--<script src="ArrayUtils.js"></script>-->
+    <!--<script src="MathMedia.js"></script>-->
+    <script src="tests.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>

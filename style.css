@@ -1,0 +1,34 @@
+.mnSlider{
+  
+}
+.mnSlider-wrap{
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  background-color: lightblue;
+}
+.mnSlider-wrap{
+  position: relative;
+}
+.mnSlider-slide{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.text-center{
+  text-align: center;
+}
+.mnSlider-slide.after{
+  left:100%;
+}
+.mnSlider-slide.actual{
+  left: 0;
+}
+.mnSlider-slide.before{
+  left:-100%;
+}
