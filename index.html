@@ -10,35 +10,33 @@
 </head>
 
 <body ng-app="slideAngular" ng-controller="MainController as mainCtrl">
-    <div class="mnSlider">
+    <div class="mnSlider three-responsive" ng-class="{'isReversing':mainCtrl.mnSlide.isReversing}">
         <div class="mnSlider-wrap">
-            <div class="mnSlider-slide" 
-            ng-repeat="elem in mainCtrl.mnSlide.lista"
-            ng-class="{'before':elem._mnSlide.before,'actual':elem._mnSlide.actual,'after':elem._mnSlide.after}"
-            >
+            <div class="mnSlider-slide fade" ng-repeat="elem in mainCtrl.mnSlide.lista" ng-class="{'before':elem._mnSlide.before,'actual':elem._mnSlide.actual,'after':elem._mnSlide.after}">
                 <div class="text-center">
                     <img ng-src="{{elem.img}}" alt="">
                     <p>{{elem.nome}}</p>
-                    <!--<span ng-if="elem.flexBoxSlide.before">before</span>
-                <span ng-if="elem.flexBoxSlide.after">after</span>
-                <span ng-if="elem.flexBoxSlide.actual">actual</span>-->
+                    <span ng-if="elem._mnSlide.before">before</span>
+                    <span ng-if="elem._mnSlide.after">after</span>
+                    <span ng-if="elem._mnSlide.actual">actual</span>
                     <h4>{{elem.idade}}</h4>
+                    <span style="color:red" ng-if="mainCtrl.mnSlide.isReversing">Reversing</span>
+                    <span style="color:green" ng-if="!mainCtrl.mnSlide.isReversing">Progressing</span>
                 </div>
+            </div>
+            <div class="mnSlider-controls">
+                <button class='toggle' ng-click="mainCtrl.mnSlide.prev()">Prev</button>
+                <button class='toggle' ng-click="mainCtrl.mnSlide.next()">Next</button>
+                <button class='toggle' ng-click="mainCtrl.mnSlide.remove(mainCtrl.mnSlide.getIndexActual())">delete</button>
             </div>
         </div>
     </div>
-    <!--<div class='controls'>
-        <button class='toggle' ng-click="mainCtrl.prev()">Prev</button>
-        <button class='toggle' ng-click="mainCtrl.next()">Next</button>
-    </div>-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <!--<script src="ArrayUtils.js"></script>-->
     <!--<script src="MathMedia.js"></script>-->
-    <script src="tests.js"></script>
+    <!--<script src="tests.js"></script>-->
     <script src="script.js"></script>
-    
 </body>
 
 </html>

@@ -44,9 +44,9 @@ var check6 = {
 
         if(!lista[0]._mnSlide.actual) console.error("Error");
         if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
-        if(!lista[4]._mnSlide.after) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
+        if(lista[4]._mnSlide.after || lista[4]._mnSlide.before) console.error("Error");
         if(!lista[5]._mnSlide.before) console.error("Error");
 
         console.log("Finish _nextList0");
@@ -66,9 +66,9 @@ var check6 = {
         if(!lista[0]._mnSlide.before) console.error("Error");
         if(!lista[1]._mnSlide.actual) console.error("Error");
         if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
-        if(!lista[4]._mnSlide.after) console.error("Error");
-        if(!lista[5]._mnSlide.after) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
+        if(lista[4]._mnSlide.after || lista[4]._mnSlide.before) console.error("Error");
+        if(lista[5]._mnSlide.after || lista[5]._mnSlide.before) console.error("Error");
 
 
         console.log("Finish _nextList1");
@@ -88,8 +88,8 @@ var check6 = {
         if(!lista[0]._mnSlide.before) console.error("Error");
         if(!lista[1]._mnSlide.actual) console.error("Error");
         if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
-        if(!lista[4]._mnSlide.after) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
+        if(lista[4]._mnSlide.after || lista[4]._mnSlide.before) console.error("Error");
 
 
         console.log("Finish _nextList2");
@@ -107,9 +107,9 @@ var check6 = {
         if(lista[5]._mnSlide.order != 0) console.error("Error");
 
         if(!lista[0]._mnSlide.after) console.error("Error");
-        if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
+        if(lista[1]._mnSlide.after || lista[1]._mnSlide.before) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
         if(!lista[4]._mnSlide.before) console.error("Error");
         if(!lista[5]._mnSlide.actual) console.error("Error");
         
@@ -129,9 +129,9 @@ var check6 = {
         if(lista[5]._mnSlide.order != 0) console.error("Error");
         
         if(!lista[0]._mnSlide.after) console.error("Error");
-        if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
+        if(lista[1]._mnSlide.after || lista[1]._mnSlide.before) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
         if(!lista[4]._mnSlide.before) console.error("Error");
         if(!lista[5]._mnSlide.actual) console.error("Error");
 
@@ -144,9 +144,9 @@ var check6 = {
         if(lista[4]._mnSlide.order != 0) console.error("Error");
         if(lista[5]._mnSlide.order != 1) console.error("Error");
         
-        if(!lista[0]._mnSlide.after) console.error("Error");
-        if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
+        if(lista[0]._mnSlide.after || lista[0]._mnSlide.before) console.error("Error");
+        if(lista[1]._mnSlide.after || lista[1]._mnSlide.before) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
         if(!lista[3]._mnSlide.before) console.error("Error");
         if(!lista[4]._mnSlide.actual) console.error("Error");
         if(!lista[5]._mnSlide.after) console.error("Error");
@@ -160,12 +160,12 @@ var check6 = {
         if(lista[4]._mnSlide.order != 1) console.error("Error");
         if(lista[5]._mnSlide.order != 2) console.error("Error");
         
-        if(!lista[0]._mnSlide.after) console.error("Error");
-        if(!lista[1]._mnSlide.after) console.error("Error");
+        if(lista[0]._mnSlide.after || lista[0]._mnSlide.before) console.error("Error");
+        if(lista[1]._mnSlide.after || lista[1]._mnSlide.before) console.error("Error");
         if(!lista[2]._mnSlide.before) console.error("Error");
         if(!lista[3]._mnSlide.actual) console.error("Error");
         if(!lista[4]._mnSlide.after) console.error("Error");
-        if(!lista[5]._mnSlide.after) console.error("Error");
+        if(lista[5]._mnSlide.after || lista[5]._mnSlide.before) console.error("Error");
 
         mnSlide.prev();
 
@@ -176,12 +176,12 @@ var check6 = {
         if(lista[4]._mnSlide.order != 2) console.error("Error");
         if(lista[5]._mnSlide.order != 3) console.error("Error");
         
-        if(!lista[0]._mnSlide.after) console.error("Error");
+        if(lista[0]._mnSlide.after || lista[0]._mnSlide.before) console.error("Error");
         if(!lista[1]._mnSlide.before) console.error("Error");
         if(!lista[2]._mnSlide.actual) console.error("Error");
         if(!lista[3]._mnSlide.after) console.error("Error");
-        if(!lista[4]._mnSlide.after) console.error("Error");
-        if(!lista[5]._mnSlide.after) console.error("Error");
+        if(lista[4]._mnSlide.after || lista[4]._mnSlide.before) console.error("Error");
+        if(lista[5]._mnSlide.after || lista[5]._mnSlide.before) console.error("Error");
 
         mnSlide.prev();
 
@@ -195,9 +195,9 @@ var check6 = {
         if(!lista[0]._mnSlide.before) console.error("Error");
         if(!lista[1]._mnSlide.actual) console.error("Error");
         if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
-        if(!lista[4]._mnSlide.after) console.error("Error");
-        if(!lista[5]._mnSlide.after) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
+        if(lista[4]._mnSlide.after || lista[4]._mnSlide.before) console.error("Error");
+        if(lista[5]._mnSlide.after || lista[5]._mnSlide.before) console.error("Error");
 
         mnSlide.prev();
 
@@ -210,9 +210,9 @@ var check6 = {
         
         if(!lista[0]._mnSlide.actual) console.error("Error");
         if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
-        if(!lista[4]._mnSlide.after) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
+        if(lista[4]._mnSlide.after || lista[4]._mnSlide.before) console.error("Error");
         if(!lista[5]._mnSlide.before) console.error("Error");
 
         mnSlide.prev();
@@ -225,9 +225,9 @@ var check6 = {
         if(lista[5]._mnSlide.order != 0) console.error("Error");
         
         if(!lista[0]._mnSlide.after) console.error("Error");
-        if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
+        if(lista[1]._mnSlide.after || lista[1]._mnSlide.before) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
         if(!lista[4]._mnSlide.before) console.error("Error");
         if(!lista[5]._mnSlide.actual) console.error("Error");
 
@@ -249,8 +249,8 @@ var check6 = {
         if(lista[4]._mnSlide.order != 0) console.error("Error");
 
         if(!lista[0]._mnSlide.after) console.error("Error");
-        if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
+        if(lista[1]._mnSlide.after || lista[1]._mnSlide.before) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
         if(!lista[3]._mnSlide.before) console.error("Error");
         if(!lista[4]._mnSlide.actual) console.error("Error");
 
@@ -274,8 +274,8 @@ var check6 = {
 
         if(!lista[0]._mnSlide.actual) console.error("Error");
         if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
         if(!lista[4]._mnSlide.before) console.error("Error");
 
 
@@ -301,9 +301,9 @@ var check6 = {
         if(lista[4]._mnSlide.order != 0) console.error("Error");
         if(lista[5]._mnSlide.order != 1) console.error("Error");
 
-        if(!lista[0]._mnSlide.after) console.error("Error");
-        if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
+        if(lista[0]._mnSlide.after || lista[0]._mnSlide.before) console.error("Error");
+        if(lista[1]._mnSlide.after || lista[1]._mnSlide.before) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
         if(!lista[3]._mnSlide.before) console.error("Error");
         if(!lista[4]._mnSlide.actual) console.error("Error");
         if(!lista[5]._mnSlide.after) console.error("Error");
@@ -329,9 +329,9 @@ var check6 = {
 
         if(!lista[0]._mnSlide.actual) console.error("Error");
         if(!lista[1]._mnSlide.after) console.error("Error");
-        if(!lista[2]._mnSlide.after) console.error("Error");
-        if(!lista[3]._mnSlide.after) console.error("Error");
-        if(!lista[4]._mnSlide.after) console.error("Error");
+        if(lista[2]._mnSlide.after || lista[2]._mnSlide.before) console.error("Error");
+        if(lista[3]._mnSlide.after || lista[3]._mnSlide.before) console.error("Error");
+        if(lista[4]._mnSlide.after || lista[4]._mnSlide.before) console.error("Error");
         if(!lista[5]._mnSlide.before) console.error("Error");
 
 

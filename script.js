@@ -12,28 +12,28 @@
             idade: 21,
             img: 'http://placehold.it/200x200'
         }
-        //, {
-        //     nome: 'de',
-        //     idade: 32,
-        //     img: 'http://placehold.it/200x200'
-        // }, {
-        //     nome: 'souza',
-        //     idade: 32,
-        //     img: 'http://placehold.it/200x200'
-        // }, {
-        //     nome: 'neto',
-        //     idade: 32,
-        //     img: 'http://placehold.it/200x200'
-        // }, {
-        //     nome: 'fim',
-        //     idade: 32,
-        //     img: 'http://placehold.it/200x200'
-        // }
+        , {
+            nome: 'de',
+            idade: 32,
+            img: 'http://placehold.it/200x200'
+        }, {
+            nome: 'souza',
+            idade: 32,
+            img: 'http://placehold.it/200x200'
+        }, {
+            nome: 'neto',
+            idade: 32,
+            img: 'http://placehold.it/200x200'
+        }, {
+            nome: 'fim',
+            idade: 32,
+            img: 'http://placehold.it/200x200'
+        }
         ];
 
         
-        // mainCtrl.mnSlide = MnSlide.create(mainCtrl.array); 
-        window.tests.execute();
+        mainCtrl.mnSlide = MnSlide.create(mainCtrl.array); 
+        // window.tests.execute();
     });
 
     angular.module("slideAngular").service('MnSlide', function ($window, $timeout) {
@@ -62,10 +62,11 @@
             obj.toString = toString;
             obj.getActual = getActual;
             obj.getIndexActual = getIndexActual;
+            obj.isReversing = false;
             
             function goTo(index){
                 if(index >= obj.lista.length || index < 0) return console.error("Index not exist");
-
+                obj.isReversing = index < obj.getIndexActual();
                 _organizeOrder(obj.lista,index);
                 obj.lista.forEach(_organizePositions);
             }
@@ -75,10 +76,12 @@
             function next(){
                 obj.lista.forEach(_nextList);
                 obj.lista.forEach(_organizePositions);
+                obj.isReversing = false;
             }
             function prev(){
                 obj.lista.forEach(_prevList);
                 obj.lista.forEach(_organizePositions);
+                obj.isReversing = true;
             }
 
             function restart(){
@@ -89,6 +92,7 @@
             }
 
             function remove(indexRemove){
+                if(isNaN(indexRemove)) return console.error("Invalid index");
                 if(indexRemove >= obj.lista.length || indexRemove < 0) return console.error("Index not exist");
                 
                 var indexActual = obj.getIndexActual();
@@ -104,6 +108,8 @@
 
                 _organizeOrder(obj.lista,novoIndexActual);
                 obj.lista.forEach(_organizePositions);
+
+                obj.isReversing = indexActual < obj.getIndexActual();
             }
 
             function getIndexActual(){
@@ -182,16 +188,11 @@
             mnSlide.actual = true;
             else if(mnSlide.order == array.length - 1)
             mnSlide.before = true;
-            else
+            else if(array[(index-1 < 0 ? array.length - 1:index-1)]._mnSlide.order == 0)
             mnSlide.after = true;
         }
 
-        window.tests.create = create;
-
-        // window.tests._nextList = _nextList;
-        // window.tests._prevList = _prevList;
-        // window.tests._organizeOrder = _organizeOrder;
-        // window.tests._organizePositions = _organizePositions;
+        // window.tests.create = create;
         
 
         return service;
